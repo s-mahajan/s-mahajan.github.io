@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <title>{{ site.name }}</title>
+
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+  <meta name="author" content="{{ site.name }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:70%;vertical-align:middle">
+              <h1>
+                Shweta Mahajan
+              </h1>
+              <p>Hello! I am currently a Ph.D. student at <a href="http://www.visinf.tu-darmstadt.de/visinf/news/index.en.jsp">Visual Inference group</a>, <a href="http://www.tu-darmstadt.de/index.en.jsp">Technische Universität Darmstadt</a>, under the supervision of <a href="https://www.visinf.tu-darmstadt.de/visinf/team_members/sroth/sroth.en.jsp">Prof. Stefan Roth, Ph.D.</a>.
+              </p>
+              <p style="text-align:center">
+                <a href="mailto:shweta.nith@outlook.com">Email</a> &nbsp;/&nbsp;
+                <a href="/pdfs/cv.pdf">CV</a>  &nbsp;/&nbsp;
+                <a href="https://scholar.google.de/citations?user=DUKzkPMAAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp;
+                <a href="https://github.com/s-mahajan">Github</a> &nbsp;/&nbsp;
+                <a href="https://www.linkedin.com/in/shweta-mahajan-4808a017/"> LinkedIn </a>
+              </p>
+            </td>
+            <td style="padding:2.5%;width:30%;max-width:30%">
+              <img style="width:100%;max-width:100%" alt="profile photo" src="images/profile_img.png">
+            </td>
+          </tr>
+        </table>
+
+
+<!-- News -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>News</h2>
+              <ul>{% for post in site.posts %}{% for cat in post.categories %}{% if cat == 'news' %}{% if post.visible == true %}
+              <li>{{ post.date | date: "%m/%Y" }}: {{post.comment}}</li>{% endif %}{% endif %}{% endfor %}{% endfor %}</ul>
+            </td>
+          </tr>
+        </table>
+
+<!-- Research -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Research</h2>
+              <p>
+                I am interested in computer vision and machine learning, specifically in deep generative models for multimodal representation learning.
+              </p>
+            </td>
+          </tr>
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          {% for post in site.posts %}{% for cat in post.categories %}{% if cat == 'research' %}
+          <tr onmouseout="{{post.alias}}_stop()" onmouseover="{{post.alias}}_start()">
+            <td style="padding:2.0%;width:25%;vertical-align:middle">
+              <div class="one" style="width:auto; height:auto; max-width:100%;">{% if post.image_over %}
+                <div class="two" style="width:auto; height:auto; max-width:100%;" id='{{post.alias}}_mouseover'>
+                <img src={{post.image_over}} width="160"></div>{% endif %}{% if post.video_over %}
+                <div class="two" style="width:auto; height:auto; max-width:100%;" id='{{post.alias}}_mouseover'>
+                <video width="160" muted autoplay loop><source src={{post.video_over}} type="video/mp4">Your browser does not support the video tag. 
+                </video></div>{% endif %}
+                <img src={{post.image}} width="160">
+              </div>
+              <script type="text/javascript">
+                function {{post.alias}}_start() {
+                  document.getElementById('{{post.alias}}_mouseover').style.opacity = "1";
+                }
+                function {{post.alias}}_stop() {
+                  document.getElementById('{{post.alias}}_mouseover').style.opacity = "0";
+                }
+                {{post.alias}}_stop()
+              </script>
+            </td>
+            <td style="padding:2.0%;width:75%;vertical-align:middle">              
+              {% if post.titlelink %}<a href="{{post.titlelink}}"><h3>{{post.title}}</h3></a>{% else %}<h3>{{post.title}}</h3>{% endif %}
+              <br>
+              {{post.authors}}
+              <br>
+              <em>{{post.venue}}</em>, {{post.year}}{% if post.comment %}<font color="#FA4841"><b>&nbsp;&nbsp;{{post.comment}}</b></font>{% endif %}
+              <br>{% if post.comingsoon %}<font color="gray">coming soon!</font>{% else %}
+              <a href="{{post.paper}}">paper</a>{% if post.supp %} / 
+              <a href="{{post.supp}}">supp</a>{% endif %}{% if post.arxiv %} / 
+              <a href="{{post.arxiv}}">arxiv</a>{% endif %}{% if post.project %} / 
+              <a href="{{post.project}}">project</a>{% endif %}{% if post.code %} / 
+              <a href="{{post.code}}">code</a>{% endif %}{% if post.talk %} / 
+              <a href="{{post.talk}}">talk</a>{% endif %}{% if post.video %} / 
+              <a href="{{post.video}}">video</a>{% endif %}{% if post.poster %} / 
+              <a href="{{post.poster}}">poster</a>{% endif %}{% if post.slide %} / 
+              <a href="{{post.slide}}">slide</a>{% endif %}{% endif %}
+              {{ post.excerpt }}
+            </td>
+          </tr>
+          {% endif %}{% endfor %}{% endfor %}
+        </table>
+        <br>
+        <br>
+
+<!-- Project -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Project</h2>
+            </td>
+          </tr>
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          {% for post in site.posts %}{% for cat in post.categories %}{% if cat == 'project' %}
+          <tr onmouseout="{{post.alias}}_stop()" onmouseover="{{post.alias}}_start()">
+            <td style="padding:2.0%;width:25%;vertical-align:middle">
+              <div class="one" style="width:auto; height:auto; max-width:100%;">
+                <div class="two" style="width:auto; height:auto; max-width:100%;" id='{{post.alias}}_image'>
+                  <img src={{post.image_over}} width="160"></div>
+                <img src={{post.image}} width="160">
+              </div>
+              <script type="text/javascript">
+                function {{post.alias}}_start() {
+                  document.getElementById('{{post.alias}}_image').style.opacity = "1";
+                }
+                function {{post.alias}}_stop() {
+                  document.getElementById('{{post.alias}}_image').style.opacity = "0";
+                }
+                {{post.alias}}_stop()
+              </script>
+            </td>
+            <td style="padding:2.0%;width:75%;vertical-align:middle">
+              {% if post.titlelink %}<a href="{{post.titlelink}}"><h3>{{post.title}}</h3></a>{% else %}<h3>{{post.title}}</h3>{% endif %}
+              <br>
+              <em>{{post.venue}}</em>, {{post.year}} {% if post.comment %}<font color="#FA4841"><b>&nbsp;&nbsp;{{post.comment}}</b></font>{% endif %}
+              <br>
+              {% if post.video %}<a href="{{post.video}}">video</a>{% endif %}{% if post.project %} / 
+              <a href="{{post.project}}">project</a>{% endif %}
+              <p></p>
+              {{ post.excerpt }}
+            </td>
+          </tr>
+          {% endif %}{% endfor %}{% endfor %}
+        </table>
+        <br>
+        <br>
+        <br>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:0px">
+              <br>
+              <p style="text-align:right;font-size:small;">
+                Design / source code from <a style="font-size:small;" href="https://jonbarron.info">Jon Barron</a>'s / <a style="font-size:small;" href="https://leonidk.com/">Leonid Keselman</a>'s website
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
+
