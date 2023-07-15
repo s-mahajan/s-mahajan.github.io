@@ -32,7 +32,10 @@
               <h1>
                 Shweta Mahajan
               </h1>
-              <p>Hello! I am currently a postdoctoral researcher in the <a href="https://vision.cs.ubc.ca/">Vision Group</a> at <a href="https://www.ubc.ca/">University of British Columbia</a> advised by <a href="https://www.cs.ubc.ca/~lsigal/">Prof. Leonid Sigal</a> and <a href="https://www.cs.ubc.ca/~kmyi/">Prof. Kwang Moo Yi</a>. I obtained my Ph.D. at <a href="http://www.visinf.tu-darmstadt.de/visinf/news/index.en.jsp">Visual Inference Group</a>, <a href="http://www.tu-darmstadt.de/index.en.jsp">Technische Universität Darmstadt</a>, under the supervision of <a href="https://www.visinf.tu-darmstadt.de/visinf/team_members/sroth/sroth.en.jsp">Prof. Stefan Roth, Ph.D.</a>.
+              <p>Hello! I am currently a postdoctoral researcher in the <a href="https://vision.cs.ubc.ca/">Vision Group</a> at <a href="https://www.ubc.ca/">University of British Columbia</a> advised by <a href="https://www.cs.ubc.ca/~lsigal/">Prof. Leonid Sigal</a> and <a href="https://www.cs.ubc.ca/~kmyi/">Prof. Kwang Moo Yi</a>. My research at UBC is focussed on diffusion models for high-level as well as low-level computer vision.
+                I obtained my Ph.D. under the supervision of <a href="https://www.visinf.tu-darmstadt.de/visinf/team_members/sroth/sroth.en.jsp">Prof. Stefan Roth, Ph.D.</a> in the <a href="http://www.visinf.tu-darmstadt.de/visinf/news/index.en.jsp">Visual Inference Group</a>, <a href="http://www.tu-darmstadt.de/index.en.jsp">Technische Universität Darmstadt</a>.
+                During my Ph.D., I conducted research on deep generative algorithms for multimodal represenation learning and the efficiency of exact inference deep generative models.
+                I received my M.Sc. from the <a href="https://www.uni-saarland.de/en/department/computer-science.html"> Saarland University</a> where I was a part of the  <a href="https://www.ml.uni-saarland.de/index.html">Machine Learning Group</a> and the <a href="https://www.mpi-inf.mpg.de/home">Max Planck Institute of Informatics</a>. 
               </p>
               <p style="text-align:center">
                 <a href="mailto:shweta.nith@outlook.com">Email</a> &nbsp;/&nbsp;
@@ -54,6 +57,8 @@
             <td style="padding:2.5%;width:100%;vertical-align:middle">
               <h2>News</h2>
               <ul>
+              <li>07/2023: Awarded research grant by the Vector Institute of Aritificial Intelligence!</li> 
+              <li>06/2023: Nominated for the Bertha Benz Best Thesis Award in Germany!</li> 
               <li>02/2023: Our paper, Make-A-Story: Visual Memory Conditioned Consistent Story Generation, has been accepted at CVPR 2023.</li> 
               <li>10/2022: I have joined UBC as a postdoctoral researcher.</li> 
               <li>06/2022: I have successfully defended my Ph.D. dissertation!</li> 
@@ -86,10 +91,10 @@
                 function storyldm_start() {
                   document.getElementById('storyldm_mouseover').style.opacity = "1";
                 }
-                function styleseqcvae_stop() {
+                function storyldm_stop() {
                   document.getElementById('storyldm_mouseover').style.opacity = "0";
                 }
-                styleseqcvae_stop()
+                storyldm_stop()
               </script>
             </td>
             <td style="padding:2.0%;width:75%;vertical-align:middle">              
@@ -106,6 +111,36 @@ when needed.</p>
 
             </td>
           </tr>
+
+           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr onmouseout="thesis_stop()" onmouseover="thesis_start()">
+            <td style="padding:2.0%;width:25%;vertical-align:middle">
+              <div class="one" style="width:auto; height:auto; max-width:100%;">
+                <div class="two" style="width:auto; height:auto; max-width:100%;" id='storyldm_mouseover'>
+                <img src=/images/thesis.png width="180"></div>
+                <img src=/images/thesis.png width="180">
+              </div>
+              <script type="text/javascript">
+                function thesis_start() {
+                  document.getElementById('storyldm_mouseover').style.opacity = "1";
+                }
+                function thesis_stop() {
+                  document.getElementById('storyldm_mouseover').style.opacity = "0";
+                }
+                thesis_stop()
+              </script>
+            </td>
+            <td style="padding:2.0%;width:75%;vertical-align:middle">              
+               <a href="https://tuprints.ulb.tu-darmstadt.de/21651/1/mahajan-phd.pdf"><h3>Multimodal Representation Learning for Diverse Synthesis with Deep Generative Models.</h3></a>
+              <br>
+              <b>Shweta Mahajan</b>
+              <br>
+              <em>Ph.D. Thesis</em>, 2022
+              <br>
+              <a href="https://tuprints.ulb.tu-darmstadt.de/21651/">Thesis</a> 
+            </td>
+          </tr>
+          
           <tr onmouseout="styleseqcvae_stop()" onmouseover="styleseqcvae_start()">
             <td style="padding:2.0%;width:25%;vertical-align:middle">
               <div class="one" style="width:auto; height:auto; max-width:100%;">
