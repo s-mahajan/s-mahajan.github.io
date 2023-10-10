@@ -57,7 +57,10 @@
             <td style="padding:2.5%;width:100%;vertical-align:middle">
               <h2>News</h2>
               <ul>
-              <li>07/2023: Awarded research grant by the Vector Institute of Aritificial Intelligence!</li> 
+              <li>09/2023: Talk on Multimodal Representation Learning with Deep Generative Models at NTU Singapore.</li>
+              <li>09/2023: Unsupervised Semantic Correspondence Using Stable Diffusion accepted at NeurIPS 2023.</li>
+              <li>08/2023: Nominated for the GI-Dissertationspreis!</li>
+              <li>07/2023: Awarded research grant by the Vector Institute of Artificial Intelligence!</li> 
               <li>06/2023: Nominated for the Bertha Benz Best Thesis Award in Germany!</li> 
               <li>02/2023: Make-A-Story: Visual Memory Conditioned Consistent Story Generation accepted at CVPR 2023.</li> 
               <li>10/2022: I have joined UBC as a postdoctoral researcher.</li> 
@@ -78,6 +81,38 @@
             </td>
           </tr>
         </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr onmouseout="storyldm_stop()" onmouseover="storyldm_start()">
+            <td style="padding:2.0%;width:25%;vertical-align:middle">
+              <div class="one" style="width:auto; height:auto; max-width:100%;">
+                <div class="two" style="width:auto; height:auto; max-width:100%;" id='storyldm_mouseover'>
+                <img src=/images/neurips_2023.png width="180"></div>
+                <img src=/images/neurips_2023.png width="180">
+              </div>
+              <script type="text/javascript">
+                function storyldm_start() {
+                  document.getElementById('storyldm_mouseover').style.opacity = "1";
+                }
+                function storyldm_stop() {
+                  document.getElementById('storyldm_mouseover').style.opacity = "0";
+                }
+                storyldm_stop()
+              </script>
+            </td>
+            <td style="padding:2.0%;width:75%;vertical-align:middle">              
+               <a href="https://arxiv.org/pdf/2305.15581.pdf"><h3>Unsupervised Semantic Correspondence Using Stable Diffusion</h3></a>
+              <br>
+              Eric Hedlin, Gopal Sharma, <b>Shweta Mahajan</b>, Hossam Isack, Abhishek Kar, Andrea Tagliasacchi, Kwang Moo Yi
+              <br>
+              <em>NeurIPS</em>, 2023
+              <br>
+              <a href="https://arxiv.org/pdf/2305.15581.pdf">paper</a> / 
+              <a href="https://arxiv.org/pdf/2305.15581.pdf">arxiv</a> / 
+              <a href="https://github.com/ubc-vision/LDM_correspondences">code</a> / 
+              <p> One can leverage this semantic knowledge within diffusion models to find semantic correspondences with prompt optimization.</p>
+            </td>
+          </tr>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr onmouseout="storyldm_stop()" onmouseover="storyldm_start()">
