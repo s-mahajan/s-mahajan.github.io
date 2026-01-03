@@ -32,7 +32,7 @@
               <h1>
                 Shweta Mahajan
               </h1>
-              <p> I am a Machine Learning Researcher at Qualcomm AI Research. I was a postdoctoral researcher and a <a href="https://vectorinstitute.ai/">Vector Postdoctoral Affiliate</a> in the <a href="https://vision.cs.ubc.ca/">Vision Group</a> at <a href="https://www.ubc.ca/">University of British Columbia</a> advised by <a href="https://www.cs.ubc.ca/~lsigal/">Prof. Leonid Sigal</a> and <a href="https://www.cs.ubc.ca/~kmyi/">Prof. Kwang Moo Yi</a>. My research at UBC is focussed on diffusion models for high-level as well as low-level computer vision.
+              <p> I am a professor in the EECS department at <a href="https://lassonde.yorku.ca/">York University</a>. I was a Machine Learning Researcher at <a href="https://www.qualcomm.com/research/artificial-intelligence">Qualcomm AI Research</a>. I was a postdoctoral researcher and a <a href="https://vectorinstitute.ai/">Vector Postdoctoral Affiliate</a> in the <a href="https://vision.cs.ubc.ca/">Vision Group</a> at <a href="https://www.ubc.ca/">University of British Columbia</a> advised by <a href="https://www.cs.ubc.ca/~lsigal/">Prof. Leonid Sigal</a> and <a href="https://www.cs.ubc.ca/~kmyi/">Prof. Kwang Moo Yi</a>. My research at UBC is focussed on diffusion models for high-level as well as low-level computer vision.
                 I obtained my Ph.D. under the supervision of <a href="https://www.visinf.tu-darmstadt.de/visinf/team_members/sroth/sroth.en.jsp">Prof. Stefan Roth, Ph.D.</a> in the <a href="http://www.visinf.tu-darmstadt.de/visinf/news/index.en.jsp">Visual Inference Group</a>, <a href="http://www.tu-darmstadt.de/index.en.jsp">Technische Universität Darmstadt</a>.
                 During my Ph.D., I researched deep generative algorithms for multimodal representation learning and the efficiency of exact inference deep generative models.
                 I received my M.Sc. from the <a href="https://www.uni-saarland.de/en/department/computer-science.html"> Saarland University</a> where I was a part of the  <a href="https://www.ml.uni-saarland.de/index.html">Machine Learning Group</a> and the <a href="https://www.mpi-inf.mpg.de/home">Max Planck Institute of Informatics</a>. 
@@ -57,24 +57,40 @@
             <td style="padding:2.5%;width:100%;vertical-align:middle">
               <h2>News</h2>
               <ul>
-              <li>07/2025: DuoLoRA: Cycle-consistent and Rank-disentangled Content-Style Personalization accepted at ICCV2025!</li>
-              <li>02/2025: HyperNet Fields: Efficiently Training Hypernetworks without Ground Truth by Learning Weight Trajectories accepted at CVPR2025!</li>
-              <li>02/2025: Distilling Multi-modal Large Language Models for Autonomous Driving accepted at CVPR2025! </li>
-              <li>11/2024: Recognized as a Top Reviewer at NeurIPS 2024! </li>
-              <li>02/2024: Prompting Hard or Hardly Prompting: Prompt Inversion for Text-to-Image Diffusion Models accepted at CVPR 2024. </li>
-              <li>02/2024: ViVid-1-to-3: Novel View Synthesis with Video Diffusion Models accepted at CVPR 2024. </li>
-              <li>02/2024: Unsupervised Keypoints from Pretrained Diffusion Models accepted at CVPR 2024. </li>
-              <li>11/2023: Recognized as a Top Reviewer at NeurIPS 2023! </li>
-              <li>09/2023: Talk on Multimodal Representation Learning with Deep Generative Models at NTU Singapore.</li>
-              <li>09/2023: Unsupervised Semantic Correspondence Using Stable Diffusion accepted at NeurIPS 2023.</li>
-              <li>08/2023: Nominated for the GI-Dissertationspreis!</li>
-              <li>07/2023: Awarded research grant by the Vector Institute of Artificial Intelligence!</li> 
-              <li>06/2023: Invited to the doctoral consortium at CVPR 2023!</li> 
-              <li>06/2023: Nominated for the Bertha Benz Best Thesis Award in Germany!</li> 
-              <li>02/2023: Make-A-Story: Visual Memory Conditioned Consistent Story Generation accepted at CVPR 2023.</li> 
-              <li>10/2022: I have joined UBC as a postdoctoral researcher.</li> 
-              <li>06/2022: I have successfully defended my Ph.D. dissertation (summa cum laude)!</li> 
-              </ul>
+  <!-- 2025+ (always visible) -->
+  <li>1/2026: I have started as an assistant professor at York University and as a Vector faculty affiliate!</li>
+  <li>11/2025: Attention Guided Alignment in Efficient Vision-Language Models presented at Neurips 2025 Workshop on
+Efficient Reasoning!</li>
+  <li>11/2025: Recognized as a Top Reviewer at NeurIPS 2025!</li>
+  <!-- Toggle link -->
+  <li style="list-style:none; margin-top:6px;">
+    <a href="javascript:void(0);" id="news-toggle" onclick="toggleOlderNews()">
+      More news ▼
+    </a>
+  </li>
+</ul>
+
+<!-- Older news (hidden by default) -->
+<ul id="older-news" style="display:none; margin-top:0;">
+  <li>07/2025: DuoLoRA: Cycle-consistent and Rank-disentangled Content-Style Personalization accepted at ICCV2025!</li>
+  <li>02/2025: HyperNet Fields: Efficiently Training Hypernetworks without Ground Truth by Learning Weight Trajectories accepted at CVPR2025!</li>
+  <li>02/2025: Distilling Multi-modal Large Language Models for Autonomous Driving accepted at CVPR2025!</li>
+  <li>11/2024: Recognized as a Top Reviewer at NeurIPS 2024!</li>
+  <li>02/2024: Prompting Hard or Hardly Prompting: Prompt Inversion for Text-to-Image Diffusion Models accepted at CVPR 2024.</li>
+  <li>02/2024: ViVid-1-to-3: Novel View Synthesis with Video Diffusion Models accepted at CVPR 2024.</li>
+  <li>02/2024: Unsupervised Keypoints from Pretrained Diffusion Models accepted at CVPR 2024.</li>
+  <li>11/2023: Recognized as a Top Reviewer at NeurIPS 2023!</li>
+  <li>09/2023: Talk on Multimodal Representation Learning with Deep Generative Models at NTU Singapore.</li>
+  <li>09/2023: Unsupervised Semantic Correspondence Using Stable Diffusion accepted at NeurIPS 2023.</li>
+  <li>08/2023: Nominated for the GI-Dissertationspreis!</li>
+  <li>07/2023: Awarded research grant by the Vector Institute of Artificial Intelligence!</li>
+  <li>06/2023: Invited to the doctoral consortium at CVPR 2023!</li>
+  <li>06/2023: Nominated for the Bertha Benz Best Thesis Award in Germany!</li>
+  <li>02/2023: Make-A-Story: Visual Memory Conditioned Consistent Story Generation accepted at CVPR 2023.</li>
+  <li>10/2022: I have joined UBC as a postdoctoral researcher.</li>
+  <li>06/2022: I have successfully defended my Ph.D. dissertation (summa cum laude)!</li>
+</ul>
+
             </td>
           </tr>
         </table>
