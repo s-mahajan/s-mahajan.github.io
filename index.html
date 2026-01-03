@@ -584,6 +584,22 @@ when needed.</p>
       </td>
     </tr>
   </table>
+  <script>
+  function toggleOlderNews() {
+    const older = document.getElementById("older-news");
+    const toggle = document.getElementById("news-toggle");
+
+    if (!older || !toggle) return;
+
+    if (older.style.display === "none" || older.style.display === "") {
+      older.style.display = "block";
+      toggle.textContent = "Less news ▲";
+    } else {
+      older.style.display = "none";
+      toggle.textContent = "More news ▼";
+    }
+  }
+</script>
 </body>
 
 </html>
