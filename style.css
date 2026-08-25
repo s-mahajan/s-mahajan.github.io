@@ -140,7 +140,7 @@ h1.name {
 
 .portrait {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 2;
   object-fit: cover;
   border-radius: var(--radius);
   filter: grayscale(45%);
@@ -277,12 +277,12 @@ h2.section-title {
 }
 
 .pub-thumb {
-  width: 96px;
-  height: 96px;
+  width: 180px;
+  height: 120px;
   object-fit: cover;
   border-radius: var(--radius);
   border: 1px solid var(--line);
-  filter: grayscale(85%);
+  filter: grayscale(50%);
   transition: filter 0.2s ease;
 }
 
