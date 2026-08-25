@@ -13,13 +13,12 @@
   --accent-soft: #eaeff3;
   --flag: #a8461f;
   --flag-soft: #faf1ea;
-  --radius: 3px;
+  --radius: 6px;
 
   --font-display: "Helvetica Neue", Helvetica, "Fraunces", Arial, sans-serif;
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
 
-  /* Expanded max-width so the page spans further across the screen */
   --max: 1140px;
 }
 
@@ -138,13 +137,23 @@ h1.name {
   color: var(--accent);
 }
 
+/* Portrait Rendering */
 .portrait {
   width: 100%;
-  aspect-ratio: 1 / 2;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
+  object-position: center;
   border-radius: var(--radius);
-  filter: grayscale(45%);
   border: 1px solid var(--line);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  filter: grayscale(25%);
+  transition: filter 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portrait:hover {
+  filter: grayscale(0%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 /* ---------- Section scaffolding ---------- */
@@ -272,22 +281,30 @@ h2.section-title {
 
 .pub {
   display: grid;
-  grid-template-columns: 96px 1fr;
-  gap: 20px;
+  grid-template-columns: 130px 1fr;
+  gap: 24px;
+  align-items: start;
 }
 
+/* Wide Landscape Thumbnail Rendering */
 .pub-thumb {
-  width: 180px;
-  height: 120px;
+  width: 130px;
+  height: 81px;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
+  object-position: center;
   border-radius: var(--radius);
   border: 1px solid var(--line);
-  filter: grayscale(50%);
-  transition: filter 0.2s ease;
+  background-color: var(--accent-soft);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  filter: grayscale(40%);
+  transition: filter 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .pub:hover .pub-thumb {
   filter: grayscale(0%);
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .pub-tag {
@@ -372,11 +389,12 @@ footer {
     max-width: 140px;
   }
   .pub {
-    grid-template-columns: 64px 1fr;
+    grid-template-columns: 90px 1fr;
+    gap: 16px;
   }
   .pub-thumb {
-    width: 64px;
-    height: 64px;
+    width: 90px;
+    height: 56px;
   }
   .news-list li {
     grid-template-columns: 1fr;
