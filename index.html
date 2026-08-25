@@ -275,30 +275,7 @@
 
     </div>
   </section>
-
-</main>
-
-<footer class="wrap">
-  <p>© Shweta Mahajan.</p>
-</footer>
-
-<script>
-function toggleOlderNews() {
-  const older = document.getElementById("older-news");
-  const toggle = document.getElementById("news-toggle");
-  if (!older || !toggle) return;
-  const isHidden = older.hasAttribute("hidden");
-  if (isHidden) {
-    older.removeAttribute("hidden");
-    toggle.textContent = "Less news ▴";
-    toggle.setAttribute("aria-expanded", "true");
-  } else {
-    older.setAttribute("hidden", "");
-    toggle.textContent = "More news ▾";
-    toggle.setAttribute("aria-expanded", "false");
-  }
-}
-</script>
+  
 <section class="block" id="awards">
   <div class="block-head">
     <h2 class="section-title">Honors & Awards</h2>
@@ -350,5 +327,29 @@ function toggleOlderNews() {
     </li>
   </ul>
 </section>
+
+</main>
+
+<footer class="wrap">
+  <p>© Shweta Mahajan.</p>
+</footer>
+
+<script>
+function toggleOlderNews() {
+  const older = document.getElementById("older-news");
+  const toggle = document.getElementById("news-toggle");
+  if (!older || !toggle) return;
+  const isHidden = older.hasAttribute("hidden");
+  if (isHidden) {
+    older.removeAttribute("hidden");
+    toggle.textContent = "Less news ▴";
+    toggle.setAttribute("aria-expanded", "true");
+  } else {
+    older.setAttribute("hidden", "");
+    toggle.textContent = "More news ▾";
+    toggle.setAttribute("aria-expanded", "false");
+  }
+}
+</script>
 </body>
 </html>
