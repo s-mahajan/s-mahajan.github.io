@@ -192,30 +192,27 @@ h2.section-title {
 /* ---------- Hiring callout ---------- */
 
 .callout {
-  background: var(--flag-soft);
-  border: 1px solid #e8c9b6;
-  border-left: 3px solid var(--flag);
+  background: var(--accent-soft);
+  border: 1px solid #d8c9ea;
+  border-left: 3px solid var(--accent);
   border-radius: var(--radius);
   padding: 18px 20px;
 }
-
 .callout h2 {
   font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--flag);
+  color: var(--accent);
   margin: 0 0 8px;
 }
-
 .callout p {
   margin: 0;
   color: var(--ink);
   font-size: 15px;
 }
-
 .callout a {
-  color: var(--flag);
+  color: var(--accent);
 }
 
 /* ---------- News ---------- */
